@@ -6,15 +6,51 @@
     <meta name="description" content="Team Styrit — professional esports organization.">
     <title>Team Styrit — Esports Organization</title>
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <header></header>
+    <header class="header">
+        <div class="container header__container">
+            <a class="logo" href="index.html" aria-label="Team Styrit home"> STYRIT</a>
+            <nav class="navigation" aria-label="Main navigation">
+                <ul class="navigation__list">
+                    <li class="navigation__item">
+                        <a class="navigation__link" href="#home">Home</a>
+                    </li>
+                    <li class="navigation__item">
+                        <a class="navigation__link" href="#matches">Matches</a>
+                    </li>
+                    <li class="navigation__item">
+                        <a class="navigation__link" href="#teams">Teams</a>
+                    </li>
+                    <li class="navigation__item">
+                        <a class="navigation__link" href="#achievements">Achievements</a>
+                    </li>
+                    <li class="navigation__item">
+                        <a class="navigation__link" href="roster.html">Roster</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="header__actions">
+                <button class="theme-toggle" type="button" aria-label="Switch color theme">
+                    <span class="theme-toggle__icon" aria-hidden="true"></span>
+                </button>
+                <button class="burger" type="button" aria-label="Open navigation menu" aria-expanded="false">
+                    <span class="burger__line"></span>
+                    <span class="burger__line"></span>
+                    <span class="burger__line"></span>
+                </button>
+            </div>
+        </div>
+    </header>
 
     <main></main>
-    
+
     <footer></footer>
 
     <script src="js/script.js"></script>
