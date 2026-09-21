@@ -6,6 +6,13 @@
     <meta name="description" content="Team Styrit — professional esports organization.">
     <title>Team Styrit — Esports Organization</title>
     <link rel="icon" href="favicon.png" type="image/svg+xml">
+    <script>
+        (() => {
+            if (localStorage.getItem("theme") === "light") {
+            document.documentElement.classList.add("light-theme");
+            }
+        })();
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -79,7 +86,7 @@
                     <h2 class="section-heading__title">Featured matches</h2>
                 </div>
                 <div class="matches__slider">
-                    <article class="match-card">
+                    <div class="match-card">
                         <div class="match-card__top">
                             <span class="match-card__status">UPCOMING</span>
                             <span class="match-card__game">CS2</span>
@@ -91,8 +98,8 @@
                             <span>SEPT 28 / 19:00</span>
                             <span>ESL Challenger</span>
                         </div>
-                    </article>
-                    <article class="match-card">
+                    </div>
+                    <div class="match-card">
                         <div class="match-card__top">
                             <span class="match-card__status">UPCOMING</span>
                             <span class="match-card__game">VALORANT</span>
@@ -106,8 +113,8 @@
                             <span>OCT 02 / 20:30</span>
                             <span>VCT Open</span>
                         </div>
-                    </article>
-                    <article class="match-card">
+                    </div>
+                    <div class="match-card">
                         <div class="match-card__top">
                             <span class="match-card__status">WIN</span>
                             <span class="match-card__game">CS2</span>
@@ -121,9 +128,9 @@
                             <span>SEPT 21 / FINAL</span>
                             <span>Regional Cup</span>
                         </div>
-                    </article>
+                    </div>
                 </div>
-                <div class="slider-controls" aria-label="Match slider controls">
+                <div class="slider-controls">
                     <button class="slider-controls__button" type="button" aria-label="Previous match"> ← </button>
                     <div class="slider-controls__dots">
                         <span class="slider-controls__dot slider-controls__dot--active"></span>
@@ -175,22 +182,22 @@
                     <h2 class="section-heading__title">Achievements</h2>
                 </div>
                 <div class="achievements__grid">
-                    <article class="stat">
+                    <div class="stat">
                         <span class="stat__value">12+</span>
                         <span class="stat__label">Tournaments</span>
-                    </article>
-                    <article class="stat">
+                    </div>
+                    <div class="stat">
                         <span class="stat__value">8</span>
                         <span class="stat__label">Grand Finals</span>
-                    </article>
-                    <article class="stat">
+                    </div>
+                    <div class="stat">
                         <span class="stat__value">3</span>
                         <span class="stat__label">Championships</span>
-                    </article>
-                    <article class="stat">
+                    </div>
+                    <div class="stat">
                         <span class="stat__value">2021</span>
                         <span class="stat__label">Founded</span>
-                    </article>
+                    </div>
                 </div>
             </div>
         </section>
