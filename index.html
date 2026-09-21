@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Team Styrit — professional esports organization.">
+    <title>Team Styrit — Esports Organization</title>
+    <link rel="icon" href="favicon.png" type="image/svg+xml">
+    <script>
+        (() => {
+            if (localStorage.getItem("theme") === "light") {
+            document.documentElement.classList.add("light-theme");
+            }
+        })();
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header__container">
+            <a class="logo" href="index.html" aria-label="Team Styrit home">TEAM STYRIT</a>
+            <nav class="navigation" aria-label="Main navigation">
+                <ul class="navigation__list">
+                    <li class="navigation__item">
+                        <a class="navigation__link" href="#home">Home</a>
+                    </li>
+                    <li class="navigation__item">
+                        <a class="navigation__link" href="#matches">Matches</a>
+                    </li>
+                    <li class="navigation__item">
+                        <a class="navigation__link" href="#teams">Teams</a>
+                    </li>
+                    <li class="navigation__item">
+                        <a class="navigation__link" href="#achievements">Achievements</a>
+                    </li>
+                    <li class="navigation__item">
+                        <a class="navigation__link" href="roster.html">Roster</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="header__actions">
+                <button class="theme-toggle" type="button" aria-label="Switch color theme">
+                    <span class="theme-toggle__icon" aria-hidden="true"></span>
+                </button>
+                <button class="burger" type="button" aria-label="Open navigation menu" aria-expanded="false">
+                    <span class="burger__line"></span>
+                    <span class="burger__line"></span>
+                    <span class="burger__line"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="container hero__container">
+                <div class="hero__content">
+                    <p class="hero__eyebrow">TEAM STYRIT / ESPORTS ORGANIZATION</p>
+                    <h1 class="hero__title">
+                        Built to<br>
+                        compete.
+                    </h1>
+                    <p class="hero__description">
+                        We are a professional esports organization built around
+                        ambitious players, relentless competition and the pursuit
+                        of excellence.
+                    </p>
+                    <a class="button button--primary" href="roster.html">
+                        Explore roster
+                    </a>
+                </div>
+                <div class="hero__visual">
+                    <img src="assets/images/hero/team-logo.png" alt="Team Styrit esports logo">
+                </div>
+            </div>
+        </section>
+        
+        <section class="matches" id="matches">
+            <div class="container">
+                <div class="section-heading">
+                    <h2 class="section-heading__title">Featured matches</h2>
+                </div>
+                <div class="matches__slider">
+                    <div class="match-card">
+                        <div class="match-card__top">
+                            <span class="match-card__status">UPCOMING</span>
+                            <span class="match-card__game">CS2</span>
+                        </div> <div class="match-card__teams">
+                            <span>STYRIT</span>
+                            <strong>VS</strong>
+                            <span>VERTEX</span>
+                        </div> <div class="match-card__bottom">
+                            <span>SEPT 28 / 19:00</span>
+                            <span>ESL Challenger</span>
+                        </div>
+                    </div>
+                    <div class="match-card">
+                        <div class="match-card__top">
+                            <span class="match-card__status">UPCOMING</span>
+                            <span class="match-card__game">VALORANT</span>
+                        </div>
+                        <div class="match-card__teams">
+                            <span>STYRIT</span>
+                            <strong>VS</strong>
+                            <span>PHANTOM</span>
+                        </div>
+                        <div class="match-card__bottom">
+                            <span>OCT 02 / 20:30</span>
+                            <span>VCT Open</span>
+                        </div>
+                    </div>
+                    <div class="match-card">
+                        <div class="match-card__top">
+                            <span class="match-card__status">WIN</span>
+                            <span class="match-card__game">CS2</span>
+                        </div>
+                        <div class="match-card__teams">
+                            <span>STYRIT</span>
+                            <strong>2 — 1</strong>
+                            <span>NOVA</span>
+                        </div>
+                        <div class="match-card__bottom">
+                            <span>SEPT 21 / FINAL</span>
+                            <span>Regional Cup</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-controls">
+                    <button class="slider-controls__button" type="button" aria-label="Previous match"> ← </button>
+                    <div class="slider-controls__dots">
+                        <span class="slider-controls__dot slider-controls__dot--active"></span>
+                        <span class="slider-controls__dot"></span>
+                        <span class="slider-controls__dot"></span>
+                    </div>
+                    <button class="slider-controls__button" type="button" aria-label="Next match"> → </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="teams" id="teams">
+            <div class="container">
+                <div class="section-heading">
+                    <h2 class="section-heading__title">Our teams</h2>
+                </div>
+                <div class="teams__grid">
+                    <article class="team-card">
+                        <div class="team-card__number">CS2</div>
+                        <div class="team-card__content">
+                            <h3 class="team-card__title">STYRIT CS</h3>
+                            <p class="team-card__description"> Precision, discipline and calculated aggression. </p>
+                            <a class="team-card__link" href="roster.html">View roster →</a>
+                        </div>
+                    </article>
+                    <article class="team-card">
+                        <div class="team-card__number">VALORANT</div>
+                        <div class="team-card__content">
+                            <h3 class="team-card__title">STYRIT VAL</h3>
+                            <p class="team-card__description"> Fast decisions, stupid game and fearless execution. </p>
+                            <a class="team-card__link" href="roster.html">View roster →</a>
+                        </div>
+                    </article>
+                    <article class="team-card">
+                        <div class="team-card__number">DOTA 2</div>
+                        <div class="team-card__content">
+                            <h3 class="team-card__title">STYRIT DOTA</h3>
+                            <p class="team-card__description"> Strategy, adaptation and complete team control. </p>
+                            <a class="team-card__link" href="roster.html">View roster →</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="achievements" id="achievements">
+            <div class="container">
+                <div class="section-heading">
+                    <h2 class="section-heading__title">Achievements</h2>
+                </div>
+                <div class="achievements__grid">
+                    <div class="stat">
+                        <span class="stat__value">12+</span>
+                        <span class="stat__label">Tournaments</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat__value">8</span>
+                        <span class="stat__label">Grand Finals</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat__value">3</span>
+                        <span class="stat__label">Championships</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat__value">2021</span>
+                        <span class="stat__label">Founded</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer__container">
+            <div class="footer__brand">
+                <a class="logo" href="index.html">STYRIT</a>
+                <p>Professional esports organization.</p>
+            </div>
+            <div class="footer__contacts">
+                <span class="footer__label">CONTACT</span>
+                <a href="mailto:contact@styrit.gg">contact@styrit.gg</a>
+            </div>
+            <div class="footer__socials">
+                <span class="footer__label">FOLLOW</span>
+                <a href="https://discord.com" target="_blank" rel="noopener noreferrer">Discord</a>
+                <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">YouTube</a>
+                <a href="https://x.com" target="_blank" rel="noopener noreferrer">X</a>
+            </div>
+            <div class="footer__bottom">
+                <span>© 2026 Team Styrit</span>
+                <a href="https://rs.school/" target="_blank" rel="noopener noreferrer">RS School</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
