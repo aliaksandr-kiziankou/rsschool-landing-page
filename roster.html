@@ -77,102 +77,31 @@
                     <h2 class="section-heading__title">Our roster</h2>
                 </div>
                 <div class="category-switcher">
-                    <button class="category-switcher__button category-switcher__button--active" type="button">CS2</button>
-                    <button class="category-switcher__button" type="button">VALORANT</button>
-                    <button class="category-switcher__button" type="button">DOTA 2</button>
-                </div>
-                <div class="players-grid">
-                    <article class="player-card">
-                        <div class="player-card__image">
-                            <img src="assets/images/players/krypt.png" alt="Krypt — Team Styrit CS2 player">
-                        </div>
-                        <div class="player-card__content">
-                            <span class="player-card__role">AWPer</span>
-                            <h2 class="player-card__nickname">KRYPT</h2>
-                            <p class="player-card__name">Alexander Volkov</p>
-                            <span class="player-card__country">KZ / Kazakhstan</span>
-                        </div>
-                    </article>
-                    <article class="player-card">
-                        <div class="player-card__image">
-                            <img src="assets/images/players/nero.png" alt="Nero — Team Styrit CS2 player">
-                        </div>
-                        <div class="player-card__content">
-                            <span class="player-card__role">IGL</span>
-                            <h2 class="player-card__nickname">NERO</h2>
-                            <p class="player-card__name">Nikita Orlov</p>
-                            <span class="player-card__country">RU / Russia</span>
-                        </div>
-                    </article>
-                    <article class="player-card">
-                        <div class="player-card__image">
-                            <img src="assets/images/players/vex.png" alt="Vex — Team Styrit CS2 player">
-                        </div>
-                        <div class="player-card__content">
-                            <span class="player-card__role">ENTRY</span>
-                            <h2 class="player-card__nickname">VEX</h2>
-                            <p class="player-card__name">Daniel Moore</p>
-                            <span class="player-card__country">US / United States</span>
-                        </div>
-                    </article>
-                    <article class="player-card">
-                        <div class="player-card__image">
-                            <img src="assets/images/players/r1ft.png" alt="Rift — Team Styrit CS2 player">
-                        </div>
-                            <div class="player-card__content">
-                            <span class="player-card__role">SUPPORT</span>
-                            <h2 class="player-card__nickname">R1FT</h2>
-                            <p class="player-card__name">Markus Weber</p>
-                            <span class="player-card__country">DE / Germany</span>
-                        </div>
-                    </article>
-                    <article class="player-card">
-                        <div class="player-card__image">
-                            <img src="assets/images/players/zer0.png" alt="Zero — Team Styrit CS2 player">
-                        </div>
-                        <div class="player-card__content">
-                            <span class="player-card__role">RIFLER</span>
-                            <h2 class="player-card__nickname">ZER0</h2>
-                            <p class="player-card__name">Ethan Cole</p>
-                            <span class="player-card__country">GB / United Kingdom</span>
-                        </div>
-                    </article>
-                    <article class="player-card">
-                        <div class="player-card__image">
-                            <img src="assets/images/players/kao5.png" alt="Kaos — Team Styrit CS2 player">
-                        </div>
-                            <div class="player-card__content">
-                            <span class="player-card__role">LURKER</span>
-                            <h2 class="player-card__nickname">KAO5</h2>
-                            <p class="player-card__name">Adil Tumanbaev</p>
-                            <span class="player-card__country">KZ / Kazakhstan</span>
-                        </div>
-                    </article>
+                    <button
+                        class="category-switcher__button category-switcher__button--active"
+                        type="button"
+                        data-category="cs2"
+                    >
+                        CS2
+                    </button>
 
-                    <article class="player-card">
-                        <div class="player-card__image">
-                            <img src="assets/images/players/flux.png" alt="Flux — Team Styrit CS2 player">
-                        </div>
-                            <div class="player-card__content">
-                            <span class="player-card__role">RIFLER</span>
-                            <h2 class="player-card__nickname">FLUX</h2>
-                            <p class="player-card__name">Lucas Martin</p>
-                            <span class="player-card__country">FR / France</span>
-                        </div>
-                    </article>
+                    <button
+                        class="category-switcher__button"
+                        type="button"
+                        data-category="valorant"
+                    >
+                        VALORANT
+                    </button>
 
-                    <article class="player-card">
-                        <div class="player-card__image">
-                            <img src="assets/images/players/onyx.png" alt="Onyx — Team Styrit CS2 player">
-                        </div>
-                        <div class="player-card__content">
-                            <span class="player-card__role">COACH</span>
-                            <h2 class="player-card__nickname">ONYX</h2>
-                            <p class="player-card__name">Viktor Kane</p>
-                            <span class="player-card__country">SE / Sweden</span>
-                        </div>
-                    </article>
+                    <button
+                        class="category-switcher__button"
+                        type="button"
+                        data-category="dota2"
+                    >
+                        DOTA 2
+                    </button>
                 </div>
+                <div class="players-grid"></div>
                 <div class="roster__load-more">
                     <button class="button button--secondary" type="button">Load more</button>
                 </div>
@@ -203,6 +132,7 @@
         </div>
     </footer>
 
+    <script src="js/data.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
