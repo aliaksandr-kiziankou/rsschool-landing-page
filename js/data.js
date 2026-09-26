@@ -607,3 +607,78 @@ const rosterData = {
     }
   ]
 };
+
+const matchesData = [
+  {
+    status: "UPCOMING",
+    game: "CS2",
+    team: "VERTEX",
+    score: "VS",
+    date: "SEPT 28 / 19:00",
+    tournament: "ESL Challenger",
+  },
+  {
+    status: "UPCOMING",
+    game: "VALORANT",
+    team: "PHANTOM",
+    score: "VS",
+    date: "OCT 02 / 20:30",
+    tournament: "VCT Open",
+  },
+  {
+    status: "WIN",
+    game: "CS2",
+    team: "NOVA",
+    score: "2 — 1",
+    date: "SEPT 21 / FINAL",
+    tournament: "Regional Cup",
+  },
+  {
+    status: "UPCOMING",
+    game: "DOTA 2",
+    team: "TITANS",
+    score: "VS",
+    date: "OCT 05 / 18:00",
+    tournament: "DreamLeague Open",
+  },
+  {
+    status: "UPCOMING",
+    game: "VALORANT",
+    team: "RAVEN",
+    score: "VS",
+    date: "OCT 09 / 20:00",
+    tournament: "VCT Open",
+  },
+  {
+    status: "UPCOMING",
+    game: "CS2",
+    team: "FURY",
+    score: "VS",
+    date: "OCT 12 / 19:30",
+    tournament: "Regional League",
+  },
+  {
+    status: "UPCOMING",
+    game: "CS2",
+    team: "FALCONS",
+    score: "VS",
+    date: "OCT 16 / 18:30",
+    tournament: "ESL Pro League",
+  },
+  {
+    status: "WIN",
+    game: "DOTA 2",
+    team: "DRAGONS",
+    score: "2 — 0",
+    date: "OCT 18 / FINAL",
+    tournament: "Central Asia Cup",
+  },
+  {
+    status: "UPCOMING",
+    game: "VALORANT",
+    team: "APEX",
+    score: "VS",
+    date: "OCT 21 / 21:00",
+    tournament: "VCT Challengers",
+  },
+];
