@@ -360,6 +360,32 @@ const rosterData = {
         rating: "1.19",
         winRate: "67%",
         experience: "4 years"
+      },
+      parameters: {
+        agent: {
+          jett: {
+            label: "Jett",
+            rating: "1.23",
+            description: "Aggressive entry specialist with exceptional mobility and first-kill potential."
+          },
+          raze: {
+            label: "Raze",
+            rating: "1.17",
+            description: "Explosive duelist focused on clearing space and winning close-range fights."
+          }
+        },
+        map: {
+          ascent: {
+            label: "Ascent",
+            winRate: "72%",
+            description: "One of the team's strongest maps with reliable mid control."
+          },
+          haven: {
+            label: "Haven",
+            winRate: "65%",
+            description: "Consistent performance across all three sites."
+          }
+        }
       }
     },
     {
@@ -376,11 +402,37 @@ const rosterData = {
         rating: "1.12",
         winRate: "69%",
         experience: "5 years"
+      },
+      parameters: {
+        agent: {
+          omen: {
+            label: "Omen",
+            rating: "1.15",
+            description: "Flexible controller capable of creating space with precise utility."
+          },
+          viper: {
+            label: "Viper",
+            rating: "1.09",
+            description: "Strategic controller focused on area denial and post-plant setups."
+          }
+        },
+        map: {
+          bind: {
+            label: "Bind",
+            winRate: "73%",
+            description: "Strong defensive setups and effective site control."
+          },
+          lotus: {
+            label: "Lotus",
+            winRate: "67%",
+            description: "Reliable rotations and coordinated utility usage."
+          }
+        }
       }
     },
     {
       id: "zen",
-      name: "ZEN",
+      name: "Z3N",
       realName: "Arsen Lee",
       role: "Initiator",
       image: "assets/images/players/zen.jpg",
@@ -392,6 +444,32 @@ const rosterData = {
         rating: "1.14",
         winRate: "65%",
         experience: "3 years"
+      },
+      parameters: {
+        agent: {
+          sova: {
+            label: "Sova",
+            rating: "1.18",
+            description: "Information specialist with strong reconnaissance and utility timing."
+          },
+          fade: {
+            label: "Fade",
+            rating: "1.11",
+            description: "Initiator focused on revealing enemies and controlling key areas."
+          }
+        },
+        map: {
+          ascent: {
+            label: "Ascent",
+            winRate: "69%",
+            description: "Strong information control around mid and both sites."
+          },
+          sunset: {
+            label: "Sunset",
+            winRate: "64%",
+            description: "Consistent utility impact during site executions."
+          }
+        }
       }
     },
     {
@@ -408,11 +486,37 @@ const rosterData = {
         rating: "1.09",
         winRate: "68%",
         experience: "4 years"
+      },
+      parameters: {
+        agent: {
+          killjoy: {
+            label: "Killjoy",
+            rating: "1.12",
+            description: "Defensive specialist with strong site control and post-plant utility."
+          },
+          cypher: {
+            label: "Cypher",
+            rating: "1.07",
+            description: "Information-focused sentinel who controls rotations and flanks."
+          }
+        },
+        map: {
+          lotus: {
+            label: "Lotus",
+            winRate: "71%",
+            description: "Strong defensive setups and effective rotation control."
+          },
+          sunset: {
+            label: "Sunset",
+            winRate: "66%",
+            description: "Reliable performance when anchoring defensive positions."
+          }
+        }
       }
     },
     {
       id: "viper",
-      name: "VIPER",
+      name: "V1PER",
       realName: "Nurlan Akhmet",
       role: "Controller",
       image: "assets/images/players/viper.jpg",
@@ -424,11 +528,37 @@ const rosterData = {
         rating: "1.11",
         winRate: "66%",
         experience: "5 years"
+      },
+      parameters: {
+        agent: {
+          viper: {
+            label: "Viper",
+            rating: "1.16",
+            description: "Controller specialist with strong area denial and post-plant execution."
+          },
+          omen: {
+            label: "Omen",
+            rating: "1.08",
+            description: "Flexible controller capable of supporting fast site executions."
+          }
+        },
+        map: {
+          breeze: {
+            label: "Breeze",
+            winRate: "74%",
+            description: "Excellent control of long sightlines and open areas."
+          },
+          icebox: {
+            label: "Icebox",
+            winRate: "68%",
+            description: "Strong utility usage around vertical site structures."
+          }
+        }
       }
     },
     {
       id: "pulse",
-      name: "PULSE",
+      name: "PUL5E",
       realName: "Egor Ivanov",
       role: "Duelist",
       image: "assets/images/players/pulse.jpg",
@@ -440,11 +570,37 @@ const rosterData = {
         rating: "1.17",
         winRate: "63%",
         experience: "3 years"
+      },
+      parameters: {
+        agent: {
+          raze: {
+            label: "Raze",
+            rating: "1.21",
+            description: "High-impact duelist with strong explosive entry potential."
+          },
+          neon: {
+            label: "Neon",
+            rating: "1.14",
+            description: "Fast-paced entry player capable of breaking defensive setups."
+          }
+        },
+        map: {
+          split: {
+            label: "Split",
+            winRate: "70%",
+            description: "Strong close-range engagements and effective site entries."
+          },
+          bind: {
+            label: "Bind",
+            winRate: "63%",
+            description: "Reliable entry routes with strong utility coordination."
+          }
+        }
       }
     },
     {
       id: "atlas",
-      name: "ATLAS",
+      name: "4TLAS",
       realName: "Dmitry Volk",
       role: "Initiator",
       image: "assets/images/players/atlas.jpg",
@@ -456,11 +612,37 @@ const rosterData = {
         rating: "1.10",
         winRate: "64%",
         experience: "4 years"
+      },
+      parameters: {
+        agent: {
+          breach: {
+            label: "Breach",
+            rating: "1.13",
+            description: "Initiator focused on disrupting defensive positions and enabling entries."
+          },
+          kayo: {
+            label: "KAY/O",
+            rating: "1.08",
+            description: "Utility-heavy initiator who suppresses enemy abilities during executes."
+          }
+        },
+        map: {
+          fracture: {
+            label: "Fracture",
+            winRate: "72%",
+            description: "Strong utility impact across multiple attack routes."
+          },
+          haven: {
+            label: "Haven",
+            winRate: "64%",
+            description: "Effective information gathering and coordinated site pressure."
+          }
+        }
       }
     },
     {
       id: "veil",
-      name: "VEIL",
+      name: "VE1L",
       realName: "Roman Grey",
       role: "Sentinel",
       image: "assets/images/players/veil.jpg",
@@ -472,6 +654,32 @@ const rosterData = {
         rating: "1.13",
         winRate: "70%",
         experience: "5 years"
+      },
+      parameters: {
+        agent: {
+          cypher: {
+            label: "Cypher",
+            rating: "1.17",
+            description: "Sentinel specialist with excellent information gathering and flank control."
+          },
+          sage: {
+            label: "Sage",
+            rating: "1.10",
+            description: "Defensive specialist providing reliable support and area control."
+          }
+        },
+        map: {
+          haven: {
+            label: "Haven",
+            winRate: "75%",
+            description: "Excellent defensive coverage across three bomb sites."
+          },
+          ascent: {
+            label: "Ascent",
+            winRate: "70%",
+            description: "Strong control of defensive choke points and mid."
+          }
+        }
       }
     }
   ],
@@ -491,6 +699,32 @@ const rosterData = {
         rating: "8.4",
         winRate: "68%",
         experience: "6 years"
+      },
+      parameters: {
+        role: {
+          carry: {
+            label: "Carry",
+            rating: "8.7",
+            description: "Late-game core focused on scaling and sustained damage."
+          },
+          farming: {
+            label: "Farming",
+            rating: "8.3",
+            description: "Highly efficient at securing resources across the map."
+          }
+        },
+        hero: {
+          phantomAssassin: {
+            label: "Phantom Assassin",
+            winRate: "74%",
+            description: "Strong late-game performance with high burst damage."
+          },
+          juggernaut: {
+            label: "Juggernaut",
+            winRate: "69%",
+            description: "Reliable carry pick with strong lane pressure."
+          }
+        }
       }
     },
     {
@@ -507,11 +741,37 @@ const rosterData = {
         rating: "8.1",
         winRate: "65%",
         experience: "5 years"
+      },
+      parameters: {
+        role: {
+          mid: {
+            label: "Mid",
+            rating: "8.5",
+            description: "Tempo-focused midlaner capable of creating advantages across the map."
+          },
+          ganking: {
+            label: "Ganking",
+            rating: "8.1",
+            description: "Strong rotational player who applies pressure to side lanes."
+          }
+        },
+        hero: {
+          invoker: {
+            label: "Invoker",
+            winRate: "71%",
+            description: "Versatile spellcaster with strong control and scaling potential."
+          },
+          stormSpirit: {
+            label: "Storm Spirit",
+            winRate: "67%",
+            description: "Mobile mid hero capable of creating constant map pressure."
+          }
+        }
       }
     },
     {
       id: "ward",
-      name: "WARD",
+      name: "W4RD",
       realName: "Maksim Ray",
       role: "Support",
       image: "assets/images/players/ward.jpg",
@@ -523,6 +783,32 @@ const rosterData = {
         rating: "7.7",
         winRate: "69%",
         experience: "7 years"
+      },
+      parameters: {
+        role: {
+          support: {
+            label: "Support",
+            rating: "7.9",
+            description: "Team-oriented support focused on vision, positioning and utility."
+          },
+          roaming: {
+            label: "Roaming",
+            rating: "7.6",
+            description: "Active support who creates opportunities through early rotations."
+          }
+        },
+        hero: {
+          rubick: {
+            label: "Rubick",
+            winRate: "73%",
+            description: "High-impact support with strong spell-stealing potential."
+          },
+          lion: {
+            label: "Lion",
+            winRate: "68%",
+            description: "Reliable disable-heavy support with strong pickoff potential."
+          }
+        }
       }
     },
     {
@@ -539,6 +825,32 @@ const rosterData = {
         rating: "7.9",
         winRate: "66%",
         experience: "5 years"
+      },
+      parameters: {
+        role: {
+          offlane: {
+            label: "Offlane",
+            rating: "8.2",
+            description: "Durable frontliner focused on creating space for the team."
+          },
+          initiator: {
+            label: "Initiator",
+            rating: "7.9",
+            description: "Teamfight specialist who starts engagements and disrupts enemy formations."
+          }
+        },
+        hero: {
+          mars: {
+            label: "Mars",
+            winRate: "70%",
+            description: "Strong initiation and teamfight control."
+          },
+          centaur: {
+            label: "Centaur",
+            winRate: "66%",
+            description: "Durable frontliner with reliable initiation tools."
+          }
+        }
       }
     },
     {
@@ -555,6 +867,32 @@ const rosterData = {
         rating: "7.8",
         winRate: "67%",
         experience: "6 years"
+      },
+      parameters: {
+        role: {
+          support: {
+            label: "Support",
+            rating: "7.8",
+            description: "Reliable support focused on protecting cores and controlling fights."
+          },
+          defensive: {
+            label: "Defensive",
+            rating: "7.6",
+            description: "Patient player who prioritizes positioning and team survival."
+          }
+        },
+        hero: {
+          dazzle: {
+            label: "Dazzle",
+            winRate: "72%",
+            description: "Strong defensive support with powerful save potential."
+          },
+          oracle: {
+            label: "Oracle",
+            winRate: "67%",
+            description: "Utility-focused support with excellent defensive abilities."
+          }
+        }
       }
     },
     {
@@ -571,11 +909,37 @@ const rosterData = {
         rating: "8.2",
         winRate: "64%",
         experience: "4 years"
+      },
+      parameters: {
+        role: {
+          mid: {
+            label: "Mid",
+            rating: "8.3",
+            description: "Aggressive midlaner focused on controlling tempo and creating space."
+          },
+          nuker: {
+            label: "Nuker",
+            rating: "8.0",
+            description: "High-damage spellcaster who pressures opponents throughout the game."
+          }
+        },
+        hero: {
+          emberSpirit: {
+            label: "Ember Spirit",
+            winRate: "73%",
+            description: "Highly mobile hero with strong initiation and escape potential."
+          },
+          puck: {
+            label: "Puck",
+            winRate: "68%",
+            description: "Mobile control hero capable of disrupting teamfights."
+          }
+        }
       }
     },
     {
       id: "fort",
-      name: "FORT",
+      name: "F0RT",
       realName: "Roman Bek",
       role: "Offlane",
       image: "assets/images/players/fort.jpg",
@@ -587,11 +951,37 @@ const rosterData = {
         rating: "7.6",
         winRate: "63%",
         experience: "5 years"
+      },
+      parameters: {
+        role: {
+          offlane: {
+            label: "Offlane",
+            rating: "8.0",
+            description: "Durable core focused on creating space and absorbing pressure."
+          },
+          tank: {
+            label: "Tank",
+            rating: "7.8",
+            description: "Frontline specialist who protects teammates during engagements."
+          }
+        },
+        hero: {
+          tidehunter: {
+            label: "Tidehunter",
+            winRate: "71%",
+            description: "Powerful teamfight initiator with strong area control."
+          },
+          axe: {
+            label: "Axe",
+            winRate: "65%",
+            description: "Durable initiator capable of disrupting enemy formations."
+          }
+        }
       }
     },
     {
       id: "drift",
-      name: "DRIFT",
+      name: "DR1FT",
       realName: "Alex Grey",
       role: "Carry",
       image: "assets/images/players/drift.jpg",
@@ -603,6 +993,32 @@ const rosterData = {
         rating: "8.0",
         winRate: "66%",
         experience: "4 years"
+      },
+      parameters: {
+        role: {
+          carry: {
+            label: "Carry",
+            rating: "8.2",
+            description: "Scaling core focused on maximizing late-game damage output."
+          },
+          splitPush: {
+            label: "Split Push",
+            rating: "7.9",
+            description: "Strong map-pressure player who creates space through side lanes."
+          }
+        },
+        hero: {
+          luna: {
+            label: "Luna",
+            winRate: "72%",
+            description: "Fast-scaling carry with strong farming and teamfight potential."
+          },
+          drowRanger: {
+            label: "Drow Ranger",
+            winRate: "67%",
+            description: "High-damage ranged carry with strong late-game scaling."
+          }
+        }
       }
     }
   ]
