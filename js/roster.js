@@ -66,9 +66,6 @@ loadMoreButton?.addEventListener("click", () => {
   renderPlayers();
 });
 
-currentPlayers = rosterData.cs2;
-renderPlayers();
-
 /* Category Switchers */
 
 const categoryButtons = document.querySelectorAll(
@@ -92,18 +89,30 @@ categoryButtons.forEach((button) => {
   });
 });
 
+const params = new URLSearchParams(window.location.search);
+const selectedCategory = params.get("category");
+
+const initialCategory = rosterData[selectedCategory]
+  ? selectedCategory
+  : "cs2";
+
+currentPlayers = rosterData[initialCategory];
+
+categoryButtons.forEach((button) => {
+  button.classList.toggle(
+    "category-switcher__button--active",
+    button.dataset.category === initialCategory
+  );
+});
+
+renderPlayers();
+
 /* Modal Window */
 
 const playerModal = document.querySelector(".player-modal");
 const modalOverlay = document.querySelector(".player-modal__overlay");
 const modalCloseButton = document.querySelector(".player-modal__close");
-
-const modalImage = document.querySelector(".player-modal__image img");
-const modalRole = document.querySelector(".player-modal__role");
-const modalNickname = document.querySelector(".player-modal__nickname");
-const modalName = document.querySelector(".player-modal__name");
-const modalCountry = document.querySelector(".player-modal__country");
-const modalBio = document.querySelector(".player-modal__bio");
+const modalInfo = document.querySelector(".player-modal__info");
 const modalParameters = document.querySelector(".player-modal__parameters");
 const modalParameterOptions = document.querySelector(
   ".player-modal__parameter-options"
@@ -119,25 +128,58 @@ const modalParameterDescription = document.querySelector(
 );
 
 function openPlayerModal(player) {
-  if (!playerModal) return;
+  if (!playerModal || !modalInfo) return;
 
-  modalImage.src = player.image;
-  modalImage.alt = `${player.name} — Team Styrit ${player.role} player`;
+  modalInfo.innerHTML = "";
 
-  modalRole.textContent = player.role.toUpperCase();
-  modalNickname.textContent = player.name;
-  modalName.textContent = player.realName;
-  modalCountry.textContent = `${player.countryCode} / ${player.country}`;
-  modalBio.textContent = player.bio;
+  const imageWrapper = document.createElement("div");
+  imageWrapper.classList.add("player-modal__image");
 
-  renderPlayerParameters(player);
+  const image = document.createElement("img");
+  image.src = player.image;
+  image.alt = `${player.name} — Team Styrit ${player.role} player`;
+
+  imageWrapper.append(image);
+
+  const role = document.createElement("span");
+  role.classList.add("player-modal__role");
+  role.textContent = player.role.toUpperCase();
+
+  const nickname = document.createElement("h2");
+  nickname.classList.add("player-modal__nickname");
+  nickname.textContent = player.name;
+
+  const name = document.createElement("p");
+  name.classList.add("player-modal__name");
+  name.textContent = player.realName;
+
+  const country = document.createElement("p");
+  country.classList.add("player-modal__country");
+  country.textContent = `${player.countryCode} / ${player.country}`;
+
+  const parameters = createPlayerParameters(player);
+
+  const bio = document.createElement("p");
+  bio.classList.add("player-modal__bio");
+  bio.textContent = player.bio;
+
+  const infoContent = document.createElement("div");
+  infoContent.classList.add("player-modal__details");
+
+  infoContent.append(
+    role,
+    nickname,
+    name,
+    country,
+    parameters,
+    bio
+  );
+
+  modalInfo.append(imageWrapper, infoContent);
 
   playerModal.classList.add("player-modal--open");
   playerModal.setAttribute("aria-hidden", "false");
   document.body.classList.add("modal-open");
-
-  playerModal.scrollTop = 0;
-  playerModal.querySelector(".player-modal__content").scrollTop = 0;
 }
 
 function closePlayerModal() {
@@ -163,7 +205,12 @@ playersGrid?.addEventListener("click", (event) => {
 });
 
 modalCloseButton?.addEventListener("click", closePlayerModal);
-modalOverlay?.addEventListener("click", closePlayerModal);
+
+playerModal?.addEventListener("click", (event) => {
+  if (event.target === playerModal) {
+    closePlayerModal();
+  }
+});
 
 document.addEventListener("keydown", (event) => {
   if (event.key === "Escape") {
@@ -175,10 +222,13 @@ function getParameterValue(option) {
   return option.rating ?? option.winRate ?? "";
 }
 
-function renderPlayerParameters(player) {
-  if (!modalParameters || !player.parameters) return;
+function getParameterValue(option) {
+  return option.rating ?? option.winRate ?? "";
+}
 
-  modalParameters.innerHTML = "";
+function createPlayerParameters(player) {
+  const parameters = document.createElement("div");
+  parameters.classList.add("player-modal__parameters");
 
   Object.entries(player.parameters).forEach(([groupName, options]) => {
     const group = document.createElement("div");
@@ -202,17 +252,18 @@ function renderPlayerParameters(player) {
 
     result.append(value, description);
 
-    const parameterOptions = Object.values(options);
-
-    parameterOptions.forEach((option, optionIndex) => {
+    Object.values(options).forEach((option, index) => {
       const button = document.createElement("button");
 
       button.type = "button";
       button.classList.add("player-modal__parameter-button");
       button.textContent = option.label;
 
-      if (optionIndex === 0) {
-        button.classList.add("player-modal__parameter-button--active");
+      if (index === 0) {
+        button.classList.add(
+          "player-modal__parameter-button--active"
+        );
+
         value.textContent = getParameterValue(option);
         description.textContent = option.description;
       }
@@ -226,7 +277,9 @@ function renderPlayerParameters(player) {
             );
           });
 
-        button.classList.add("player-modal__parameter-button--active");
+        button.classList.add(
+          "player-modal__parameter-button--active"
+        );
 
         value.textContent = getParameterValue(option);
         description.textContent = option.description;
@@ -236,6 +289,8 @@ function renderPlayerParameters(player) {
     });
 
     group.append(title, optionsContainer, result);
-    modalParameters.append(group);
+    parameters.append(group);
   });
+
+  return parameters;
 }
