@@ -1,3 +1,5 @@
+/* Theme Toggle */
+
 const themeToggle = document.querySelector(".theme-toggle");
 const themeIcon = document.querySelector(".theme-toggle__icon");
 
